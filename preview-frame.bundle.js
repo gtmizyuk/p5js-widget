@@ -72,6 +72,10 @@
 	function p5url(version) {
 	    return "//cdnjs.cloudflare.com/ajax/libs/p5.js/" + version + "/p5.js";
 	}
+	// інтеграція Черепашки
+	function turtlep5url() {
+	    return "./map/Turtle.js";
+	}
 	function LoopChecker(sketch, funcName, maxRunTime) {
 	    var self = {
 	        wasTriggered: false,
@@ -115,7 +119,7 @@
 	        var message = e.message;
 	        var line = undefined;
 	        if (loopChecker.wasTriggered) {
-	            message = "Your loop is taking too long to run.";
+	            message = "Цикл виконується надто довго.";
 	            line = loopChecker.getLineNumber();
 	        }
 	        else if (typeof (e.lineno) === 'number' &&
@@ -131,6 +135,7 @@
 	        errorCb(message, line);
 	    });
 	    loadScripts([
+	        turtlep5url(),
 	        p5url(p5version),
 	    ], function () {
 	        document.body.appendChild(sketchScript);

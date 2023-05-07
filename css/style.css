@@ -2,7 +2,7 @@
   --very-light-gray: #f0f0f0;
   --light-pink: #ffe5ea;
   --dark-pink: #ec245e;
-  --blueish: #30b8e6;
+  --indigo: #480575; /* Indigo */
   --ui-font: Montserrat, sans-serif;
   --code-font: "Monaco", "Menlo", "Ubuntu Mono", "Consolas",
                "source-code-pro", monospace;
@@ -34,9 +34,9 @@ button {
 
 button:hover,
 button:hover .open-iconic {
-  fill: var(--blueish);
-  color: var(--blueish);
-  border-color: var(--blueish);
+  fill: var(--indigo);
+  color: var(--indigo);
+  border-color: var(--indigo);
 }
 
 a.p5-logo {
@@ -91,25 +91,42 @@ a.p5-logo img {
   display: flex;
   border-top: 1px solid var(--dark-pink);
   flex-direction: row;
+  overflow-x: hidden;
 }
 
 .panes .editor-holder {
   flex: 1;
   /* We need this for horizontal scrolling to work properly.
    * Very weird. */
-  overflow-x: hidden;  
+  overflow-x: hidden;
+  /*min-width: 300px;*/  
 }
 
 .panes .preview-holder-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
+
+/*
+.panes .divider {
+    width: 10px;
+    height: 100%;
+    background-color: var(--very-light-gray);
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') center center no-repeat var(--very-light-gray);
+    cursor: ew-resize;
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+} 
+*/
 
 .panes .preview-holder {
   flex: 1;
   display: flex;
   flex-direction: column;
-  border-left: 16px solid var(--very-light-gray);
+  border-left: 10px solid var(--very-light-gray);
 }
 
 .panes .preview-holder-wrapper iframe {
@@ -119,7 +136,6 @@ a.p5-logo img {
 
 .CodeMirror {
   font-family: var(--code-font);
-
   /* If we don't add this, the final characters on some lines aren't
    * visible if the editor has a horizontal scrollbar. Weird. */
   padding-right: 1em;
@@ -162,4 +178,3 @@ a.p5-logo img {
     align-self: center;
   }
 }
-
