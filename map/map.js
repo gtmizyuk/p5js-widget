@@ -1,4 +1,4 @@
-let cnv, theta, controlBoard;
+let t, cnv, theta, controlBoard;
 let sliderShapeTurtle, sliderSizeTurtle, sliderHeadingTurtle, sliderPenSize, colorPicker, btnSaveCanvasTurtle, btnSaveCoordsTurtle;
 let checkItems = {};
 let coords = [];
@@ -153,7 +153,7 @@ function interfaceItems(){
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);  
-};
+}
 
 function saveCanvasTurtle() {
   // зберегти зображення полотна у файл
