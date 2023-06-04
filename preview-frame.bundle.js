@@ -74,7 +74,7 @@
 	}
 	// інтеграція Черепашки
 	function turtlep5url() {
-	    return "./map/Turtle.js";
+	    return "./map/TurtleGL.js";
 	}
 	function LoopChecker(sketch, funcName, maxRunTime) {
 	    var self = {

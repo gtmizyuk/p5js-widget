@@ -350,7 +350,7 @@ class Turtle {
   }
 
   dashboard() {
-    const stripText = "JavaScript Turtle Graphics";
+    const stripText = "JavaScript Turtle Graphics Library";
     let [tX, tY] = this.getPosition();
     let [mX, mY] = this.calculateMouseXY();
 
