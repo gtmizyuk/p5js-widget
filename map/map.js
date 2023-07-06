@@ -86,7 +86,7 @@ function slidersHeadlines(){
   controlBoard.textAlign(LEFT, CENTER);
   controlBoard.noStroke();
   controlBoard.fill(254, 185, 95); // Hunyadi yellow
-  controlBoard.stroke(235, 235, 235); /* Anti-flash white */
+  controlBoard.stroke(235, 235, 235); // Anti-flash white 
   controlBoard.rect(-1, t.heightDashboard + 10, 155, 295, 0, 4, 4, 0);
   controlBoard.noStroke();
   controlBoard.fill(97, 112, 125, 255); // Payne's gray
@@ -98,9 +98,9 @@ function slidersHeadlines(){
   t.setShapeSize(sliderSizeTurtle.value());
 
   theta = sliderHeadingTurtle.value() === 360 ? 0 : sliderHeadingTurtle.value();
-  controlBoard.text(`кутова орієнтація: ${theta}\u00B0`, 10, 130);
+  controlBoard.text(`кутова орієнтація: ${theta}\u00B0`, 10, 130);  
   t.setHeading(theta);
-
+  
   controlBoard.text(`товщина олівця: ${sliderPenSize.value()}`, 10, 170);
   t.setPenSize(sliderPenSize.value());
 
@@ -152,7 +152,7 @@ function interfaceItems(){
 }
 
 function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);  
+  //resizeCanvas(windowWidth, windowHeight);  
 }
 
 function saveCanvasTurtle() {
