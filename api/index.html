@@ -5,43 +5,42 @@
 <p class="has-line-data" data-line-start="5" data-line-end="6"><code>JavaScript Turtle Graphics Library</code> - це навчальне середовище для програмування, яке містить базовий набір інструментів для створення Черепашачої графіки (<code>Turtle Graphics</code>), використовуючи об’єктно-орієнтований підхід.</p>
 <p class="has-line-data" data-line-start="7" data-line-end="8">Мета створення середовища <code>JavaScript Turtle Graphics Library</code> - знайомство з основами програмування на прикладі роботи з Черепашачою графікою у вебпереглядачі, використовуючи мову програмування <code>JavaScript</code> і можливості бібліотеки <a href="https://p5js.org/">p5.js</a>.</p>
 <h2 class="code-line" data-line-start="9" data-line-end="10"><a id="_9"></a>Підключення</h2>
-<p class="has-line-data" data-line-start="11" data-line-end="12">Середовище <code>JavaScript Turtle Graphics Library</code> є бібліотекою, яка розширює <a href="https://p5js.org/">p5.js</a>.</p>
-<p class="has-line-data" data-line-start="13" data-line-end="14">Щоб застосувати бібліотеку <code>JavaScript Turtle Graphics Library</code> у своєму проєкті, її необхідно підключити, використовуючи один із способів:</p>
+<p class="has-line-data" data-line-start="11" data-line-end="12">Щоб застосувати бібліотеку <code>JavaScript Turtle Graphics Library</code> у своєму проєкті, її необхідно підключити, використовуючи один із способів:</p>
 <ol>
-<li class="has-line-data" data-line-start="15" data-line-end="16">В онлайн-редакторі <a href="https://editor.p5js.org/">editor.p5js.org</a> файл бібліотеки <code>JavaScript Turtle Graphics Library</code> необхідно підключити у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
-<li class="has-line-data" data-line-start="16" data-line-end="17">У разі локальної розробки <a href="https://p5js.org/download/">завантажити</a> зразок проєкту <code>p5.js</code>, у який підключити файл бібліотеки <code>JavaScript Turtle Graphics Library</code> у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
-<li class="has-line-data" data-line-start="17" data-line-end="23">У онлайн-редакторі <a href="https://codepen.io/pen/">CodePen</a>:<br>
+<li class="has-line-data" data-line-start="13" data-line-end="14">В онлайн-редакторі <a href="https://editor.p5js.org/">editor.p5js.org</a> файл бібліотеки <code>JavaScript Turtle Graphics Library</code> необхідно підключити у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
+<li class="has-line-data" data-line-start="14" data-line-end="15">У разі локальної розробки <a href="https://p5js.org/download/">завантажити</a> зразок проєкту <code>p5.js</code>, у який підключити файл бібліотеки <code>JavaScript Turtle Graphics Library</code> у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
+<li class="has-line-data" data-line-start="15" data-line-end="21">У онлайн-редакторі <a href="https://codepen.io/pen/">CodePen</a>:<br>
 – перейти у вкладку <code>JS</code>;<br>
 – натиснути на зображення шестерні;<br>
 – у розділі <code>Add External Scripts/Pens</code> у рядку пошуку знайти і обрати <code>p5.js</code>;<br>
-– у розділі <code>Add External Scripts/Pens</code> натиснути на кнопку <code>+add another resource</code> і у рядок, що з’явився, додати посилання на файл бібліотеки <code>JavaScript Turtle Graphics Library</code> (посилання з розділу <a href="#__274">Початковий код</a>);<br>
+– у розділі <code>Add External Scripts/Pens</code> натиснути на кнопку <code>+add another resource</code> і у рядок, що з’явився, додати посилання на файл бібліотеки <code>JavaScript Turtle Graphics Library</code> (посилання з розділу <a href="#__272">Початковий код</a>);<br>
 – зберегти зміни, натиснувши кнопку <code>Save &amp; Close</code>.</li>
-<li class="has-line-data" data-line-start="23" data-line-end="24">В онлайн-середовищі <a href="https://replit.com/">Replit</a> при створенні нового <code>Repl</code> необхідно обрати шаблон <code>p5.js</code>, відвантажити файл бібліотеки <code>JavaScript Turtle Graphics Library</code> у створений <code>Repl</code> і підключити файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>script.js</code>.</li>
-<li class="has-line-data" data-line-start="24" data-line-end="25">У онлайн-середовищі <a href="https://openprocessing.org/">OpenProcessing</a> у створений ескіз за допомогою розділу <code>FILES</code> відвантажити файл бібліотеки <code>JavaScript Turtle Graphics Library</code>. Перейшовши у розділ <code>SKETCH</code> і обравши режим (<code>MODE</code>) <code>HTML/CSS/JS</code>, підключити відвантажений файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>mySketch.js</code>.</li>
-<li class="has-line-data" data-line-start="25" data-line-end="27">Використати <a href="https://p5js-widget.pp.ua/">p5js-widget.pp.ua</a> - простий онлайн-редактор, створений на основі <a href="https://toolness.github.io/p5.js-widget/">p5.js-widget</a> - інструменту для вбудовування на сторінки сайтів редактора для запуску і редагування ескізів <code>p5.js</code>. У цей редактор бібліотека <code>JavaScript Turtle Graphics Library</code> вже інтегрована і готова до використання.</li>
+<li class="has-line-data" data-line-start="21" data-line-end="22">В онлайн-середовищі <a href="https://replit.com/">Replit</a> при створенні нового <code>Repl</code> необхідно обрати шаблон <code>p5.js</code>, відвантажити файл бібліотеки <code>JavaScript Turtle Graphics Library</code> у створений <code>Repl</code> і підключити файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>script.js</code>.</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">У онлайн-середовищі <a href="https://openprocessing.org/">OpenProcessing</a> у створений ескіз за допомогою розділу <code>FILES</code> відвантажити файл бібліотеки <code>JavaScript Turtle Graphics Library</code>. Перейшовши у розділ <code>SKETCH</code> і обравши режим (<code>MODE</code>) <code>HTML/CSS/JS</code>, підключити відвантажений файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>mySketch.js</code>.</li>
+<li class="has-line-data" data-line-start="23" data-line-end="25">Використати <a href="https://p5js-widget.pp.ua/">p5js-widget.pp.ua</a> - простий онлайн-редактор, створений на основі <a href="https://toolness.github.io/p5.js-widget/">p5.js-widget</a> - інструменту для вбудовування на сторінки сайтів редактора для запуску і редагування ескізів <code>p5.js</code>. У цей редактор бібліотека <code>JavaScript Turtle Graphics Library</code> вже інтегрована і готова до використання.</li>
 </ol>
 <blockquote>
-<p class="has-line-data" data-line-start="27" data-line-end="28">Завантажити файл бібліотеки <code>JavaScript Turtle Graphics Library</code> можна у розділі <a href="#__274">Початковий код</a>.</p>
+<p class="has-line-data" data-line-start="25" data-line-end="26">Завантажити файл бібліотеки <code>JavaScript Turtle Graphics Library</code> можна у розділі <a href="#__272">Початковий код</a>.</p>
 </blockquote>
-<h2 class="code-line" data-line-start="29" data-line-end="30"><a id="__29"></a>Інтерактивна мапа</h2>
-<p class="has-line-data" data-line-start="31" data-line-end="32">Для зручності роботи із <code>JavaScript Turtle Graphics Library</code> створений інтерактивний застосунок, за допомогою якого можна:</p>
+<h2 class="code-line" data-line-start="27" data-line-end="28"><a id="__27"></a>Інтерактивна мапа</h2>
+<p class="has-line-data" data-line-start="29" data-line-end="30">Для зручності роботи із <code>JavaScript Turtle Graphics Library</code> створений інтерактивний застосунок, за допомогою якого можна:</p>
 <ul>
-<li class="has-line-data" data-line-start="33" data-line-end="34">відслідковувати, фіксувати на полотні і, за потреби, зберігати координати у текстовий файл;</li>
-<li class="has-line-data" data-line-start="34" data-line-end="35">зберігати у файл полотно з малюнком;</li>
-<li class="has-line-data" data-line-start="35" data-line-end="37">змінювати властивості Черепашки/олівця (колір, форму, розмір, кутову орієнтацію Черепашки, товщину і колір олівця).</li>
+<li class="has-line-data" data-line-start="31" data-line-end="32">відслідковувати, фіксувати на полотні і, за потреби, зберігати координати у текстовий файл;</li>
+<li class="has-line-data" data-line-start="32" data-line-end="33">зберігати у файл полотно з малюнком;</li>
+<li class="has-line-data" data-line-start="33" data-line-end="35">змінювати властивості Черепашки/олівця (колір, форму, розмір, кутову орієнтацію Черепашки, товщину і колір олівця).</li>
 </ul>
-<p class="has-line-data" data-line-start="37" data-line-end="38">Спробувати <code>JavaScript Turtle Graphics Library</code> та інтерактивний застосунок в дії можна за покликаннями:</p>
+<p class="has-line-data" data-line-start="35" data-line-end="36">Спробувати <code>JavaScript Turtle Graphics Library</code> та інтерактивний застосунок в дії можна за покликаннями:</p>
 <ul>
-<li class="has-line-data" data-line-start="39" data-line-end="40"><a href="https://openprocessing.org/sketch/1921747">JavaScript Turtle Graphics Library</a></li>
-<li class="has-line-data" data-line-start="40" data-line-end="42"><a href="https://openprocessing.org/sketch/1921757">Інтерактивна мапа</a></li>
+<li class="has-line-data" data-line-start="37" data-line-end="38"><a href="https://openprocessing.org/sketch/1921747">JavaScript Turtle Graphics Library</a></li>
+<li class="has-line-data" data-line-start="38" data-line-end="40"><a href="https://openprocessing.org/sketch/1921757">Інтерактивна мапа</a></li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="42" data-line-end="43">За потреби, перейшовши за цими покликаннями, можна зробити <code>FORK</code>-и ескізів.</p>
+<p class="has-line-data" data-line-start="40" data-line-end="41">За потреби, перейшовши за цими покликаннями, можна зробити <code>FORK</code>-и ескізів.</p>
 </blockquote>
-<h2 class="code-line" data-line-start="44" data-line-end="45"><a id="__44"></a>Огляд можливостей</h2>
-<h3 class="code-line" data-line-start="46" data-line-end="47"><a id="__46"></a>Початкові налаштування</h3>
-<p class="has-line-data" data-line-start="48" data-line-end="49">У блоці <code>setup()</code> записуємо функцію <code>createCanvas(windowWidth, windowHeight)</code> для створення полотна, де <code>windowWidth</code> і <code>windowHeight</code> - це системні змінні, що містять значення ширина і висота внутрішнього вікна полотна відповідно, і викликаємо <code>myCode()</code> - це назва блоку, в якому записані інструкції для Черепашки.</p>
-<pre><code class="has-line-data" data-line-start="51" data-line-end="58" class="language-javascript"><span class="hljs-keyword">let</span> t;
+<h2 class="code-line" data-line-start="42" data-line-end="43"><a id="__42"></a>Огляд можливостей</h2>
+<h3 class="code-line" data-line-start="44" data-line-end="45"><a id="__44"></a>Початкові налаштування</h3>
+<p class="has-line-data" data-line-start="46" data-line-end="47">У блоці <code>setup()</code> записуємо функцію <code>createCanvas(windowWidth, windowHeight)</code> для створення полотна, де <code>windowWidth</code> і <code>windowHeight</code> - це системні змінні, що містять значення ширина і висота внутрішнього вікна полотна відповідно, і викликаємо <code>myCode()</code> - це назва блоку, в якому записані інструкції для Черепашки.</p>
+<pre><code class="has-line-data" data-line-start="49" data-line-end="56" class="language-javascript"><span class="hljs-keyword">let</span> t;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
   createCanvas(windowWidth, windowHeight);
@@ -49,51 +48,51 @@
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="59" data-line-end="60">Значення розмірів полотна, які за замовчуванням використовує функція <code>createCanvas()</code> (коли викликається без аргументів) - <code>200x200</code> пікселів. За потреби можна створити полотно будь-якого розміру, зазначивши у <code>createCanvas()</code> відповідні значення розмірів ширини і висоти.</p>
+<p class="has-line-data" data-line-start="57" data-line-end="58">Значення розмірів полотна, які за замовчуванням використовує функція <code>createCanvas()</code> (коли викликається без аргументів) - <code>200x200</code> пікселів. За потреби можна створити полотно будь-якого розміру, зазначивши у <code>createCanvas()</code> відповідні значення розмірів ширини і висоти.</p>
 </blockquote>
-<p class="has-line-data" data-line-start="61" data-line-end="62">Також на початку у коді оголосили ім’я для майбутньої Черепашки - <code>t</code>.</p>
+<p class="has-line-data" data-line-start="59" data-line-end="60">Також на початку у коді оголосили ім’я для майбутньої Черепашки - <code>t</code>.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="63" data-line-end="64">Ім’я для Черепашки можна обрати на свій задум.</p>
+<p class="has-line-data" data-line-start="61" data-line-end="62">Ім’я для Черепашки можна обрати на свій задум.</p>
 </blockquote>
-<p class="has-line-data" data-line-start="65" data-line-end="66">Блок <code>myCode()</code> має такий вигляд:</p>
-<pre><code class="has-line-data" data-line-start="68" data-line-end="72" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCode</span>(<span class="hljs-params"></span>)</span>{
+<p class="has-line-data" data-line-start="63" data-line-end="64">Блок <code>myCode()</code> має такий вигляд:</p>
+<pre><code class="has-line-data" data-line-start="66" data-line-end="70" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCode</span>(<span class="hljs-params"></span>)</span>{
   <span class="hljs-comment">// інструкції</span>
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="73" data-line-end="74">Усі інструкції для керування Черепашкою записуємо у блоці <code>myCode()</code>. Назву цього блоку можна змінити на свій задум.</p>
+<p class="has-line-data" data-line-start="71" data-line-end="72">Усі інструкції для керування Черепашкою записуємо у блоці <code>myCode()</code>. Назву цього блоку можна змінити на свій задум.</p>
 </blockquote>
-<p class="has-line-data" data-line-start="75" data-line-end="76">Завжди першою інструкцією у блоці <code>myCode()</code> є інструкція зі створення об’єкта Черепашки з певним ім’ям, оголошеним раніше:</p>
-<pre><code class="has-line-data" data-line-start="78" data-line-end="82" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCode</span>(<span class="hljs-params"></span>)</span>{
+<p class="has-line-data" data-line-start="73" data-line-end="74">Завжди першою інструкцією у блоці <code>myCode()</code> є інструкція зі створення об’єкта Черепашки з певним ім’ям, оголошеним раніше:</p>
+<pre><code class="has-line-data" data-line-start="76" data-line-end="80" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCode</span>(<span class="hljs-params"></span>)</span>{
   t = <span class="hljs-keyword">new</span> Turtle();
 }
 </code></pre>
-<p class="has-line-data" data-line-start="83" data-line-end="84">Тепер Черепашка отримала своє ім’я <code>t</code>. Усі наступні інструкції необхідно записувати у форматі <code>t.інструкція</code>.</p>
-<h3 class="code-line" data-line-start="85" data-line-end="86"><a id="__85"></a>Координатна сітка</h3>
-<p class="has-line-data" data-line-start="87" data-line-end="88">Якщо необхідно створити координатну сітку на полотні, додаємо у <code>myCode()</code> інструкцію <code>grid()</code>:</p>
-<pre><code class="has-line-data" data-line-start="90" data-line-end="95" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCode</span>(<span class="hljs-params"></span>)</span>{
+<p class="has-line-data" data-line-start="81" data-line-end="82">Тепер Черепашка отримала своє ім’я <code>t</code>. Усі наступні інструкції необхідно записувати у форматі <code>t.інструкція</code>.</p>
+<h3 class="code-line" data-line-start="83" data-line-end="84"><a id="__83"></a>Координатна сітка</h3>
+<p class="has-line-data" data-line-start="85" data-line-end="86">Якщо необхідно створити координатну сітку на полотні, додаємо у <code>myCode()</code> інструкцію <code>grid()</code>:</p>
+<pre><code class="has-line-data" data-line-start="88" data-line-end="93" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCode</span>(<span class="hljs-params"></span>)</span>{
   t = <span class="hljs-keyword">new</span> Turtle();
   t.grid();
 }
 </code></pre>
-<p class="has-line-data" data-line-start="96" data-line-end="97">Інструкція <code>grid()</code> використовує три параметри із такими значеннями за замовчуванням:</p>
+<p class="has-line-data" data-line-start="94" data-line-end="95">Інструкція <code>grid()</code> використовує три параметри із такими значеннями за замовчуванням:</p>
 <ul>
-<li class="has-line-data" data-line-start="98" data-line-end="99">крок сітки - <code>50</code> пікселів,</li>
-<li class="has-line-data" data-line-start="99" data-line-end="100">колір сітки - <a href="https://coolors.co/e2e2e2">Platinum</a>,</li>
-<li class="has-line-data" data-line-start="100" data-line-end="102">колір осей - <a href="https://coolors.co/0b729f">Cerulean</a>.</li>
+<li class="has-line-data" data-line-start="96" data-line-end="97">крок сітки - <code>50</code> пікселів,</li>
+<li class="has-line-data" data-line-start="97" data-line-end="98">колір сітки - <a href="https://coolors.co/e2e2e2">Platinum</a>,</li>
+<li class="has-line-data" data-line-start="98" data-line-end="100">колір осей - <a href="https://coolors.co/0b729f">Cerulean</a>.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="102" data-line-end="103">Значення кольору записується як рядок в одному із форматів: <code>&quot;red&quot;</code> (назва), <code>&quot;#fdfd90&quot;</code> (шістнадцяткове значення), <code>&quot;rgb(11, 156, 78)&quot;</code> (значення червоної, зеленої, синьої складових), <code>&quot;rgba(45, 145, 67, 0.5)&quot;</code> (значення червоної, зеленої, синьої складових і прозорості).</p>
+<p class="has-line-data" data-line-start="100" data-line-end="101">Значення кольору записується як рядок в одному із форматів: <code>&quot;red&quot;</code> (назва), <code>&quot;#fdfd90&quot;</code> (шістнадцяткове значення), <code>&quot;rgb(11, 156, 78)&quot;</code> (значення червоної, зеленої, синьої складових), <code>&quot;rgba(45, 145, 67, 0.5)&quot;</code> (значення червоної, зеленої, синьої складових і прозорості).</p>
 </blockquote>
-<p class="has-line-data" data-line-start="104" data-line-end="105">Значення за замовчуванням використовуються тоді, коли <code>grid()</code> викликається без аргументів, як у прикладі вище. За потреби <code>grid()</code> можна викликати із користувацькими значеннями, зазначивши їх у дужках у вказаному порядку.</p>
+<p class="has-line-data" data-line-start="102" data-line-end="103">Значення за замовчуванням використовуються тоді, коли <code>grid()</code> викликається без аргументів, як у прикладі вище. За потреби <code>grid()</code> можна викликати із користувацькими значеннями, зазначивши їх у дужках у вказаному порядку.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="106" data-line-end="107">Використовуючи інструкцію <code>setStepGrid(step)</code> перед малюванням сітки можна окремо встановити крок сітки <code>step</code>, а за допомогою інструкції <code>getStepGrid()</code> можна отримати поточне значення кроку сітки.</p>
+<p class="has-line-data" data-line-start="104" data-line-end="105">Використовуючи інструкцію <code>setStepGrid(step)</code> перед малюванням сітки можна окремо встановити крок сітки <code>step</code>, а за допомогою інструкції <code>getStepGrid()</code> можна отримати поточне значення кроку сітки.</p>
 </blockquote>
-<h3 class="code-line" data-line-start="108" data-line-end="109"><a id="__p5js_108"></a>Черепашка і <code>p5.js</code></h3>
-<p class="has-line-data" data-line-start="110" data-line-end="111">На полотні поруч з Черепашкою можна створювати зображення, використовуючи інструменти бібліотеки <code>p5.js</code>. Виклики функцій <code>p5.js</code> для цих цілей записуються, як відомо, у тілі функцій <code>draw()</code> чи <code>setup()</code>. Зверніть увагу, що за замовчуванням початок координат <code>(0, 0)</code> знаходиться у лівому верхньому куті полотна.</p>
-<p class="has-line-data" data-line-start="112" data-line-end="113">Початок координат <code>(0, 0)</code> для Черепашки міститься в центрі полотна. За таких умов, одночасно відслідковувати координати для Черепашки і для побудови фігур складно.</p>
-<p class="has-line-data" data-line-start="114" data-line-end="115">У цьому разі код для побудови фігур за допомогою інструментів бібліотеки <code>p5.js</code> можна записувати у блоці <code>myDraw()</code> (за потреби назву блоку можна змінити на іншу) між коментарями <code>// початок коду</code> і <code>// кінець коду</code>, а виклик <code>myDraw()</code> помістити, наприклад, у блоці <code>draw()</code>, як показано нижче:</p>
-<pre><code class="has-line-data" data-line-start="117" data-line-end="134" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+<h3 class="code-line" data-line-start="106" data-line-end="107"><a id="__p5js_106"></a>Черепашка і <code>p5.js</code></h3>
+<p class="has-line-data" data-line-start="108" data-line-end="109">На полотні поруч з Черепашкою можна створювати зображення, використовуючи інструменти бібліотеки <code>p5.js</code>. Виклики функцій <code>p5.js</code> для цих цілей записуються, як відомо, у тілі функцій <code>draw()</code> чи <code>setup()</code>. Зверніть увагу, що за замовчуванням початок координат <code>(0, 0)</code> знаходиться у лівому верхньому куті полотна.</p>
+<p class="has-line-data" data-line-start="110" data-line-end="111">Початок координат <code>(0, 0)</code> для Черепашки міститься в центрі полотна. За таких умов, одночасно відслідковувати координати для Черепашки і для побудови фігур складно.</p>
+<p class="has-line-data" data-line-start="112" data-line-end="113">У цьому разі код для побудови фігур за допомогою інструментів бібліотеки <code>p5.js</code> можна записувати у блоці <code>myDraw()</code> (за потреби назву блоку можна змінити на іншу) між коментарями <code>// початок коду</code> і <code>// кінець коду</code>, а виклик <code>myDraw()</code> помістити, наприклад, у блоці <code>draw()</code>, як показано нижче:</p>
+<pre><code class="has-line-data" data-line-start="115" data-line-end="132" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
   myDraw();
 }
 
@@ -111,35 +110,35 @@
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="135" data-line-end="136">За допомогою виразу <code>let [x, y] = t.getPosition();</code> можна отримати поточні координати Черепашки з ім’ям <code>t</code> в координатній сітці, початок координат якої міститься в центрі полотна, а далі отримані координати використати для побудови фігур за допомогою інструментів бібліотеки <code>p5.js</code> на полотні.</p>
+<p class="has-line-data" data-line-start="133" data-line-end="134">За допомогою виразу <code>let [x, y] = t.getPosition();</code> можна отримати поточні координати Черепашки з ім’ям <code>t</code> в координатній сітці, початок координат якої міститься в центрі полотна, а далі отримані координати використати для побудови фігур за допомогою інструментів бібліотеки <code>p5.js</code> на полотні.</p>
 </blockquote>
-<h3 class="code-line" data-line-start="137" data-line-end="138"><a id="______137"></a>Відображення Черепашки, інформаційна панель та компас</h3>
-<p class="has-line-data" data-line-start="139" data-line-end="140">За замовчуванням на полотні відображається інформаційна панель з даними про:</p>
+<h3 class="code-line" data-line-start="135" data-line-end="136"><a id="______135"></a>Відображення Черепашки, інформаційна панель та компас</h3>
+<p class="has-line-data" data-line-start="137" data-line-end="138">За замовчуванням на полотні відображається інформаційна панель з даними про:</p>
 <ul>
-<li class="has-line-data" data-line-start="141" data-line-end="142">стан Черепашки (кутову орієнтацію, поточні координати),</li>
-<li class="has-line-data" data-line-start="142" data-line-end="143">стан олівця (на полотні чи піднятий),</li>
-<li class="has-line-data" data-line-start="143" data-line-end="145">координати вказівника миші.</li>
+<li class="has-line-data" data-line-start="139" data-line-end="140">стан Черепашки (кутову орієнтацію, поточні координати),</li>
+<li class="has-line-data" data-line-start="140" data-line-end="141">стан олівця (на полотні чи піднятий),</li>
+<li class="has-line-data" data-line-start="141" data-line-end="143">координати вказівника миші.</li>
 </ul>
-<p class="has-line-data" data-line-start="145" data-line-end="146">а у правому нижньому куті полотна увімкнений компас, який вказує напрямок і значення кутової орієнтації Черепашки.</p>
-<p class="has-line-data" data-line-start="147" data-line-end="148">За відображення вищезгаданих елементів інтерфейсу відповідають інструкції, які записуються у блоці <code>draw()</code></p>
-<pre><code class="has-line-data" data-line-start="150" data-line-end="156" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{ 
+<p class="has-line-data" data-line-start="143" data-line-end="144">а у правому нижньому куті полотна увімкнений компас, який вказує напрямок і значення кутової орієнтації Черепашки.</p>
+<p class="has-line-data" data-line-start="145" data-line-end="146">За відображення вищезгаданих елементів інтерфейсу відповідають інструкції, які записуються у блоці <code>draw()</code></p>
+<pre><code class="has-line-data" data-line-start="148" data-line-end="154" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{ 
   t.place();
   t.compass();
   t.dashboard();
 }
 </code></pre>
-<p class="has-line-data" data-line-start="157" data-line-end="158">і використовуються для таких цілей:</p>
+<p class="has-line-data" data-line-start="155" data-line-end="156">і використовуються для таких цілей:</p>
 <ul>
-<li class="has-line-data" data-line-start="159" data-line-end="160"><code>place()</code> - показати Черепашку на полотні у її поточних координатах. Цю інструкцію рекомендується завжди використовувати.</li>
-<li class="has-line-data" data-line-start="160" data-line-end="161"><code>compass()</code> - показати компас.</li>
-<li class="has-line-data" data-line-start="161" data-line-end="163"><code>dashboard()</code> - показати інформаційну панель.</li>
+<li class="has-line-data" data-line-start="157" data-line-end="158"><code>place()</code> - показати Черепашку на полотні у її поточних координатах. Цю інструкцію рекомендується завжди використовувати.</li>
+<li class="has-line-data" data-line-start="158" data-line-end="159"><code>compass()</code> - показати компас.</li>
+<li class="has-line-data" data-line-start="159" data-line-end="161"><code>dashboard()</code> - показати інформаційну панель.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="163" data-line-end="164">Також на екрані можна відобразити ім’я розробника: у блоці <code>draw()</code> розмістити інструкцію <code>t.creator()</code>.</p>
+<p class="has-line-data" data-line-start="161" data-line-end="162">Також на екрані можна відобразити ім’я розробника: у блоці <code>draw()</code> розмістити інструкцію <code>t.creator()</code>.</p>
 </blockquote>
-<h3 class="code-line" data-line-start="165" data-line-end="166"><a id="__165"></a>Багато Черепашок</h3>
-<p class="has-line-data" data-line-start="167" data-line-end="168">Для створення двох (або більше) Черепашок, необхідно оголосити їхні імена та створити їх із цими іменами:</p>
-<pre><code class="has-line-data" data-line-start="170" data-line-end="182" class="language-javascript"><span class="hljs-keyword">let</span> t1, t2;
+<h3 class="code-line" data-line-start="163" data-line-end="164"><a id="__163"></a>Багато Черепашок</h3>
+<p class="has-line-data" data-line-start="165" data-line-end="166">Для створення двох (або більше) Черепашок, необхідно оголосити їхні імена та створити їх із цими іменами:</p>
+<pre><code class="has-line-data" data-line-start="168" data-line-end="180" class="language-javascript"><span class="hljs-keyword">let</span> t1, t2;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
   createCanvas(windowWidth, windowHeight);
@@ -151,29 +150,29 @@
   t2 = <span class="hljs-keyword">new</span> Turtle();
 }
 </code></pre>
-<p class="has-line-data" data-line-start="183" data-line-end="184">Відображення на полотні створених Черепашок відбувається за допомогою виклику інструкцій <code>place()</code> для кожної із них у блоці <code>draw()</code>:</p>
-<pre><code class="has-line-data" data-line-start="186" data-line-end="191" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+<p class="has-line-data" data-line-start="181" data-line-end="182">Відображення на полотні створених Черепашок відбувається за допомогою виклику інструкцій <code>place()</code> для кожної із них у блоці <code>draw()</code>:</p>
+<pre><code class="has-line-data" data-line-start="184" data-line-end="189" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
   t1.place();
   t2.place();
 }
 </code></pre>
-<p class="has-line-data" data-line-start="192" data-line-end="193">Відповідно інструкції для різних Черепашок записуються у форматі <code>t1.інструкція</code>, <code>t2.інструкція</code> і т. д.</p>
+<p class="has-line-data" data-line-start="190" data-line-end="191">Відповідно інструкції для різних Черепашок записуються у форматі <code>t1.інструкція</code>, <code>t2.інструкція</code> і т. д.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="194" data-line-end="195">У режимі кількох Черепашок інформаційна панель і компас показують дані для одного екземпляра Черепашки, для якого вони викликаються.</p>
+<p class="has-line-data" data-line-start="192" data-line-end="193">У режимі кількох Черепашок інформаційна панель і компас показують дані для одного екземпляра Черепашки, для якого вони викликаються.</p>
 </blockquote>
-<h3 class="code-line" data-line-start="196" data-line-end="197"><a id="____196"></a>Зміна розмірів вікна полотна/вебпереглядача</h3>
-<p class="has-line-data" data-line-start="198" data-line-end="199">При зміні розмірів вікна вебпереглядача/полотна усі елементи інтерфейсу (мапа, інформаційна панель, компас тощо) залишаються на своїх місцях і з’являються смуги прокручування. Щоб ці елементи налаштувалася відповідно до нових розмірів, оновіть вебсторінку. За потреби перед цим збережіть свій код.</p>
-<p class="has-line-data" data-line-start="200" data-line-end="201">Якщо ви працюєте на вебсторінці інтерактивної мапи, спочатку встановіть розміри вікна вебпереглядача, а потім оновіть вебсторінку, щоб елементи інтерфейсу налаштувались відповідно до цих розмірів.</p>
-<h3 class="code-line" data-line-start="202" data-line-end="203"><a id="_202"></a>Інструкції</h3>
-<h4 class="code-line" data-line-start="204" data-line-end="205"><a id="_204"></a>Рух</h4>
+<h3 class="code-line" data-line-start="194" data-line-end="195"><a id="____194"></a>Зміна розмірів вікна полотна/вебпереглядача</h3>
+<p class="has-line-data" data-line-start="196" data-line-end="197">При зміні розмірів вікна вебпереглядача/полотна усі елементи інтерфейсу (мапа, інформаційна панель, компас тощо) залишаються на своїх місцях і з’являються смуги прокручування. Щоб ці елементи налаштувалася відповідно до нових розмірів, оновіть вебсторінку. За потреби перед цим збережіть свій код.</p>
+<p class="has-line-data" data-line-start="198" data-line-end="199">Якщо ви працюєте на вебсторінці інтерактивної мапи, спочатку встановіть розміри вікна вебпереглядача, а потім оновіть вебсторінку, щоб елементи інтерфейсу налаштувались відповідно до цих розмірів.</p>
+<h3 class="code-line" data-line-start="200" data-line-end="201"><a id="_200"></a>Інструкції</h3>
+<h4 class="code-line" data-line-start="202" data-line-end="203"><a id="_202"></a>Рух</h4>
 <blockquote>
-<p class="has-line-data" data-line-start="206" data-line-end="207">Рух Черепашки відбувається <strong>без анімації</strong>, тобто виконуються усі записані інструкції і Черепашка відразу розташовується на полотні у точці з кінцевими координатами.</p>
+<p class="has-line-data" data-line-start="204" data-line-end="205">Рух Черепашки відбувається <strong>без анімації</strong>, тобто виконуються усі записані інструкції і Черепашка відразу розташовується на полотні у точці з кінцевими координатами.</p>
 </blockquote>
-<p class="has-line-data" data-line-start="208" data-line-end="209">Після запуску Черепашка з’являється на полотні:</p>
+<p class="has-line-data" data-line-start="206" data-line-end="207">Після запуску Черепашка з’являється на полотні:</p>
 <ul>
-<li class="has-line-data" data-line-start="210" data-line-end="211">у точці з координатами <code>(0, 0)</code> (центр полотна),</li>
-<li class="has-line-data" data-line-start="211" data-line-end="212">“дивиться” праворуч,</li>
-<li class="has-line-data" data-line-start="212" data-line-end="214">має початкову кутову орієнтацію, що вимірюється у градусах, <code>0°</code>.</li>
+<li class="has-line-data" data-line-start="208" data-line-end="209">у точці з координатами <code>(0, 0)</code> (центр полотна),</li>
+<li class="has-line-data" data-line-start="209" data-line-end="210">“дивиться” праворуч,</li>
+<li class="has-line-data" data-line-start="210" data-line-end="212">має початкову кутову орієнтацію, що вимірюється у градусах, <code>0°</code>.</li>
 </ul>
 <table class="table table-striped table-bordered">
 <thead>
@@ -213,7 +212,7 @@
 </tr>
 </tbody>
 </table>
-<h4 class="code-line" data-line-start="224" data-line-end="225"><a id="_224"></a>Черепашка</h4>
+<h4 class="code-line" data-line-start="222" data-line-end="223"><a id="_222"></a>Черепашка</h4>
 <table class="table table-striped table-bordered">
 <thead>
 <tr>
@@ -252,9 +251,9 @@
 </tr>
 </tbody>
 </table>
-<h4 class="code-line" data-line-start="235" data-line-end="236"><a id="_235"></a>Олівець</h4>
+<h4 class="code-line" data-line-start="233" data-line-end="234"><a id="_233"></a>Олівець</h4>
 <blockquote>
-<p class="has-line-data" data-line-start="237" data-line-end="238">Якщо олівець на полотні, при переміщенні Черепашка малюватиме лінію.</p>
+<p class="has-line-data" data-line-start="235" data-line-end="236">Якщо олівець на полотні, при переміщенні Черепашка малюватиме лінію.</p>
 </blockquote>
 <table class="table table-striped table-bordered">
 <thead>
@@ -278,9 +277,9 @@
 </tr>
 </tbody>
 </table>
-<h4 class="code-line" data-line-start="245" data-line-end="246"><a id="_245"></a>Колір</h4>
+<h4 class="code-line" data-line-start="243" data-line-end="244"><a id="_243"></a>Колір</h4>
 <blockquote>
-<p class="has-line-data" data-line-start="247" data-line-end="248">Значення кольору записується як рядок в одному із форматів: <code>&quot;red&quot;</code> (назва), <code>&quot;#fdfd90&quot;</code> (шістнадцяткове значення), <code>&quot;rgb(11, 156, 78)&quot;</code> (значення червоної, зеленої, синьої складових), <code>&quot;rgba(45, 145, 67, 0.5)&quot;</code> (значення червоної, зеленої, синьої складових і прозорості).</p>
+<p class="has-line-data" data-line-start="245" data-line-end="246">Значення кольору записується як рядок в одному із форматів: <code>&quot;red&quot;</code> (назва), <code>&quot;#fdfd90&quot;</code> (шістнадцяткове значення), <code>&quot;rgb(11, 156, 78)&quot;</code> (значення червоної, зеленої, синьої складових), <code>&quot;rgba(45, 145, 67, 0.5)&quot;</code> (значення червоної, зеленої, синьої складових і прозорості).</p>
 </blockquote>
 <table class="table table-striped table-bordered">
 <thead>
@@ -312,7 +311,7 @@
 </tr>
 </tbody>
 </table>
-<h4 class="code-line" data-line-start="257" data-line-end="258"><a id="_257"></a>Фігури</h4>
+<h4 class="code-line" data-line-start="255" data-line-end="256"><a id="_255"></a>Фігури</h4>
 <table class="table table-striped table-bordered">
 <thead>
 <tr>
@@ -331,7 +330,7 @@
 </tr>
 </tbody>
 </table>
-<h4 class="code-line" data-line-start="263" data-line-end="264"><a id="_263"></a>Текст</h4>
+<h4 class="code-line" data-line-start="261" data-line-end="262"><a id="_261"></a>Текст</h4>
 <table class="table table-striped table-bordered">
 <thead>
 <tr>
@@ -347,14 +346,15 @@
 </tbody>
 </table>
 <blockquote>
-<p class="has-line-data" data-line-start="268" data-line-end="269">За замовчуванням текст є порожнім рядком і має такі параметри: вирівнювання <code>{horizontal: CENTER, vertical: CENTER}</code>, шрифту <code>{font: &quot;sans-serif&quot;, size: 12, style: NORMAL}</code>.</p>
+<p class="has-line-data" data-line-start="266" data-line-end="267">За замовчуванням текст є порожнім рядком і має такі параметри: вирівнювання <code>{horizontal: CENTER, vertical: CENTER}</code>, шрифту <code>{font: &quot;sans-serif&quot;, size: 12, style: NORMAL}</code>.</p>
 </blockquote>
-<h2 class="code-line" data-line-start="270" data-line-end="271"><a id="_270"></a>Розробка</h2>
-<p class="has-line-data" data-line-start="272" data-line-end="273">Для розробки середовища <code>JavaScript Turtle Graphics Library</code> застосовувалась мова програмування <code>JavaScript</code> та інструменти бібліотеки <a href="https://p5js.org/">p5.js</a>.</p>
-<h2 class="code-line" data-line-start="274" data-line-end="275"><a id="__274"></a>Початковий код</h2>
-<p class="has-line-data" data-line-start="276" data-line-end="277">Початковий код бібліотеки <code>JavaScript Turtle Graphics Library</code> зберігається в єдиному файлі, який можна завантажити <a href="https://res.cloudinary.com/gtstack/raw/upload/v1685869711/JavaScript%20Turtle%20Graphics%20Library/map/TurtleGL_qkgekr.js">тут</a>.</p>
-<h2 class="code-line" data-line-start="278" data-line-end="279"><a id="_278"></a>Ліцензія</h2>
-<p class="has-line-data" data-line-start="280" data-line-end="281">Середовище <code>JavaScript Turtle Graphics Library</code> поширюється вільно і безкоштовно.</p>
+<h2 class="code-line" data-line-start="268" data-line-end="269"><a id="_268"></a>Розробка</h2>
+<p class="has-line-data" data-line-start="270" data-line-end="271">Для розробки середовища <code>JavaScript Turtle Graphics Library</code> застосовувалась мова програмування <code>JavaScript</code> та інструменти бібліотеки <a href="https://p5js.org/">p5.js</a>.</p>
+<h2 class="code-line" data-line-start="272" data-line-end="273"><a id="__272"></a>Початковий код</h2>
+<p class="has-line-data" data-line-start="274" data-line-end="275">Початковий код бібліотеки <code>JavaScript Turtle Graphics Library</code> зберігається в єдиному файлі, який можна завантажити <a href="https://p5js-widget.pp.ua/map/TurtleGL.js">тут</a>.</p>
+<h2 class="code-line" data-line-start="276" data-line-end="277"><a id="_276"></a>Ліцензія</h2>
+<p class="has-line-data" data-line-start="278" data-line-end="279">Використання бібліотеки <code>JavaScript Turtle Graphics Library</code> визначається умовами ліцензії <code>Creative Commons Attribution NonCommercial Share-Alike</code> (<code>CC BY-NC-SA</code>).</p>
+<p class="has-line-data" data-line-start="280" data-line-end="281">Тобто, бібліотеку можна вільно і безкоштовно поширювати, змінювати на свій задум, за умови некомерційного використання та із заначенням авторства.</p>
 <hr>
 <p class="has-line-data" data-line-start="284" data-line-end="285">© 2023. <code>JavaScript Turtle Graphics Library</code>. Розроблено з ❤️ <strong>Олександр Мізюк</strong></p>
 </body></html>
