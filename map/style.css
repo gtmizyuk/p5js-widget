@@ -1,16 +1,18 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 canvas {
   display: block;
 }
-.btn, .chk {
+.btn,
+.chk {
   font-family: Arial, Verdana, Helvetica, sans-serif;
   font-size: 12px;
 }
 .btn {
-  background-color: rgb(254, 185, 95);  /* Hunyadi yellow */
+  background-color: rgb(254, 185, 95); /* Hunyadi yellow */
   color: rgb(97, 112, 125); /* Payne's gray */
   border: 1px solid rgb(235, 235, 235); /* Anti-flash white */
   padding: 2px 4px;
@@ -18,12 +20,11 @@ canvas {
 }
 .btn:hover {
   box-shadow: 0 0.2em 0.2em -0.2em rgb(97, 112, 125); /* Payne's gray */
-  background-color: rgb(247, 218, 181);  /* Light orange */
+  background-color: rgb(247, 218, 181); /* Light orange */
   border-color: rgb(247, 218, 181); /* Light orange */
   cursor: pointer;
 }
 .chk {
   color: rgb(97, 112, 125); /* Payne's gray */
-  white-space: nowrap; 
+  white-space: nowrap;
 }
-
