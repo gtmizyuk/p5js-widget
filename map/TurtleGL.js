@@ -37,8 +37,8 @@ class Turtle {
     [this.tX, this.tY] = this.calculateTurtleXY();
     return [this.tX, this.tY];
   }
-  
-  setPosition(newX, newY){
+
+  setPosition(newX, newY) {
     this.goto(newX, newY);
   }
 
@@ -300,7 +300,11 @@ class Turtle {
       textAlign(CENTER, CENTER);
       textSize(12);
       textStyle(BOLD);
-      text(`${abs(this.getHeading())}\u00B0`, width - 30, height - 62.5);
+      text(
+        `${abs(Math.round(this.getHeading()))}\u00B0`,
+        width - 30,
+        height - 62.5
+      );
     }
   }
 
@@ -373,7 +377,7 @@ class Turtle {
     }
     this.createDashboard.text(
       `${stripText} | Олівець: ${this.penModeText} | Кут: ${abs(
-        this.getHeading()
+        Math.round(this.getHeading())
       )}\u00B0 | Черепашка: (${tX}, ${tY}) | Вказівник: (${mX}, ${mY})`,
       5,
       12.5
@@ -415,23 +419,23 @@ class Turtle {
   }
 
   calculateTurtleXY(tX = 0, tY = 0) {
-    if ((this.x > width / 2) && (this.y < height / 2)) {
+    if (this.x > width / 2 && this.y < height / 2) {
       tX = abs(Math.round(this.x - width / 2));
       tY = abs(int(this.y - height / 2));
     }
-    if ((this.x < width / 2) && (this.y < height / 2)) {
+    if (this.x < width / 2 && this.y < height / 2) {
       tX = -abs(int(this.x - width / 2));
       tY = abs(int(this.y - height / 2));
     }
-    if ((this.x < width / 2) && (this.y > height / 2)) {
+    if (this.x < width / 2 && this.y > height / 2) {
       tX = -abs(int(this.x - width / 2));
       tY = -abs(Math.round(this.y - height / 2));
     }
-    if ((this.x > width / 2) && (this.y > height / 2)) {
+    if (this.x > width / 2 && this.y > height / 2) {
       tX = abs(Math.round(this.x - width / 2));
       tY = -abs(Math.round(this.y - height / 2));
     }
-    if ((this.x === width / 2) && (this.y !== height / 2)) {
+    if (this.x === width / 2 && this.y !== height / 2) {
       tX = 0;
       if (this.y < height / 2) {
         tY = abs(int(this.y - height / 2));
@@ -440,7 +444,7 @@ class Turtle {
         tY = -abs(Math.round(this.y - height / 2));
       }
     }
-    if ((this.x !== width / 2) && (this.y === height / 2)) {
+    if (this.x !== width / 2 && this.y === height / 2) {
       tY = 0;
       if (this.x > width / 2) {
         tX = abs(Math.round(this.x - width / 2));
@@ -449,7 +453,7 @@ class Turtle {
         tX = -abs(int(this.x - width / 2));
       }
     }
-    if ((this.x === width / 2) && (this.y === height / 2)) {
+    if (this.x === width / 2 && this.y === height / 2) {
       tX = 0;
       tY = 0;
     }
@@ -457,23 +461,23 @@ class Turtle {
   }
 
   calculateTurtleXYnormal(tX = 0, tY = 0) {
-    if ((this.x > 0) && (this.y > 0)) {
+    if (this.x > 0 && this.y > 0) {
       tX = int(this.x + width / 2);
       tY = abs(int(this.y - height / 2));
     }
-    if ((this.x < 0) && (this.y > 0)) {
+    if (this.x < 0 && this.y > 0) {
       tX = int(this.x + width / 2);
       tY = abs(int(this.y - height / 2));
     }
-    if ((this.x < 0) && (this.y < 0)) {
+    if (this.x < 0 && this.y < 0) {
       tX = int(this.x + width / 2);
       tY = int(height / 2 - this.y);
     }
-    if ((this.x > 0) && (this.y < 0)) {
+    if (this.x > 0 && this.y < 0) {
       tX = int(this.x + width / 2);
       tY = int(height / 2 - this.y);
     }
-    if ((this.x === 0) && (this.y !== 0)) {
+    if (this.x === 0 && this.y !== 0) {
       tX = width / 2;
       if (this.y > 0) {
         tY = int(height / 2 - this.y);
@@ -482,7 +486,7 @@ class Turtle {
         tY = int(height / 2 - this.y);
       }
     }
-    if ((this.x !== 0) && (this.y === 0)) {
+    if (this.x !== 0 && this.y === 0) {
       tY = height / 2;
       if (this.x > 0) {
         tX = int(this.x + width / 2);
@@ -491,7 +495,7 @@ class Turtle {
         tX = int(this.x + width / 2);
       }
     }
-    if ((this.x === 0) && (this.y === 0)) {
+    if (this.x === 0 && this.y === 0) {
       tX = width / 2;
       tY = height / 2;
     }
@@ -499,23 +503,23 @@ class Turtle {
   }
 
   calculateMouseXY(mX = mouseX, mY = mouseY) {
-    if ((mouseX > width / 2) && (mouseY < height / 2)) {
+    if (mouseX > width / 2 && mouseY < height / 2) {
       mX = abs(Math.round(mouseX - width / 2));
       mY = abs(int(mouseY - height / 2));
     }
-    if ((mouseX < width / 2) && (mouseY < height / 2)) {
+    if (mouseX < width / 2 && mouseY < height / 2) {
       mX = -abs(int(mouseX - width / 2));
       mY = abs(int(mouseY - height / 2));
     }
-    if ((mouseX < width / 2) && (mouseY > height / 2)) {
+    if (mouseX < width / 2 && mouseY > height / 2) {
       mX = -abs(int(mouseX - width / 2));
       mY = -abs(Math.round(mouseY - height / 2));
     }
-    if ((mouseX > width / 2) && (mouseY > height / 2)) {
+    if (mouseX > width / 2 && mouseY > height / 2) {
       mX = abs(Math.round(mouseX - width / 2));
       mY = -abs(Math.round(mouseY - height / 2));
     }
-    if ((mouseX === width / 2) && (mouseY !== height / 2)) {
+    if (mouseX === width / 2 && mouseY !== height / 2) {
       mX = 0;
       if (mouseY < height / 2) {
         mY = abs(int(mouseY - height / 2));
@@ -523,7 +527,7 @@ class Turtle {
       if (mouseY > height / 2) {
         mY = -abs(Math.round(mouseY - height / 2));
       }
-    } else if ((mouseX !== width / 2) && (mouseY === height / 2)) {
+    } else if (mouseX !== width / 2 && mouseY === height / 2) {
       mY = 0;
       if (mouseX > width / 2) {
         mX = abs(Math.round(mouseX - width / 2));
