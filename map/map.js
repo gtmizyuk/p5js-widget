@@ -28,7 +28,7 @@ function setup() {
 
   [startTurtleX, startTurtleY] = t.getPosition();
   t.setColor(colorPicker.color(), colorPicker.color());
-  t.write(`(${startTurtleX}, ${startTurtleY})`, {
+  t.write(`  (${startTurtleX}, ${startTurtleY})`, {
     horizontal: LEFT,
     vertical: BOTTOM,
   });
@@ -119,7 +119,7 @@ function mClick() {
   tMirror.setPosition(turtleX, turtleY);
 
   if (coordsTitle) {
-    t.write(`(${turtleX}, ${turtleY})`, { horizontal: LEFT, vertical: BOTTOM });
+    t.write(`  (${turtleX}, ${turtleY})`, { horizontal: LEFT, vertical: BOTTOM });
   }
   coords.push([turtleX, turtleY]);
 
@@ -289,7 +289,7 @@ function memoryProgress() {
       statePrev = progress[i];
     }
   } else {
-    t.write(`(${startTurtleX}, ${startTurtleY})`, {
+    t.write(`  (${startTurtleX}, ${startTurtleY})`, {
       horizontal: LEFT,
       vertical: BOTTOM,
     });
@@ -331,7 +331,7 @@ function stateMemory(
   pop();
   t.place();
   if (coordsTitle) {
-    t.write(`(${turtleX}, ${turtleY})`, { horizontal: LEFT, vertical: BOTTOM });
+    t.write(`  (${turtleX}, ${turtleY})`, { horizontal: LEFT, vertical: BOTTOM });
   }
 }
 
