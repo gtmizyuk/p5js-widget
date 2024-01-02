@@ -58,7 +58,7 @@
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="64" data-line-end="65">Значення розмірів полотна, які, за замовчуванням, використовує функція <code>createCanvas()</code> (коли викликається без аргументів) - <code>200x200</code> пікселів. За потреби можна створити полотно будь-якого розміру, зазначивши у <code>createCanvas()</code> відповідні значення розмірів ширини і висоти.</p>
+<p class="has-line-data" data-line-start="64" data-line-end="65">Значення розмірів полотна, які за стандартним налаштуванням використовує функція <code>createCanvas()</code> (коли викликається без аргументів) - <code>200x200</code> пікселів. За потреби можна створити полотно будь-якого розміру, зазначивши у <code>createCanvas()</code> відповідні значення розмірів ширини і висоти.</p>
 </blockquote>
 <p class="has-line-data" data-line-start="66" data-line-end="67">Також на початку у коді оголошуємо ім’я для майбутньої Черепашки - <code>t</code>.</p>
 <blockquote>
@@ -85,14 +85,14 @@
   t.grid();
 }
 </code></pre>
-<p class="has-line-data" data-line-start="101" data-line-end="102">Інструкція <code>grid()</code> використовує три параметри із такими значеннями за замовчуванням:</p>
+<p class="has-line-data" data-line-start="101" data-line-end="102">Інструкція <code>grid()</code> використовує три параметри із такими значеннями за стандартним налаштуванням:</p>
 <ul>
 <li class="has-line-data" data-line-start="103" data-line-end="104">крок сітки - <code>50</code> пікселів,</li>
 <li class="has-line-data" data-line-start="104" data-line-end="105">колір сітки - <a href="https://coolors.co/e2e2e2">Platinum</a>,</li>
 <li class="has-line-data" data-line-start="105" data-line-end="107">колір осей - <a href="https://coolors.co/0b729f">Cerulean</a>.</li>
 </ul>
 <p class="has-line-data" data-line-start="107" data-line-end="108">Значення кольору записується як рядок в одному із форматів: <code>&quot;red&quot;</code> (назва), <code>&quot;#fdfd90&quot;</code> (шістнадцяткове значення), <code>&quot;rgb(11, 156, 78)&quot;</code> (значення червоної, зеленої, синьої складових), <code>&quot;rgba(45, 145, 67, 0.5)&quot;</code> (значення червоної, зеленої, синьої складових і прозорості).</p>
-<p class="has-line-data" data-line-start="109" data-line-end="110">Значення за замовчуванням використовуються тоді, коли <code>grid()</code> викликається без аргументів, як у прикладі вище. За потреби <code>grid()</code> можна викликати із користувацькими значеннями, зазначивши їх у дужках у вказаному порядку. Наприклад:</p>
+<p class="has-line-data" data-line-start="109" data-line-end="110">Значення за стандартним налаштуванням використовуються тоді, коли <code>grid()</code> викликається без аргументів, як у прикладі вище. За потреби <code>grid()</code> можна викликати із користувацькими значеннями, зазначивши їх у дужках у вказаному порядку. Наприклад:</p>
 <pre><code class="has-line-data" data-line-start="112" data-line-end="117" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCode</span>(<span class="hljs-params"></span>)</span>{
   t = <span class="hljs-keyword">new</span> Turtle();
   t.grid(<span class="hljs-number">30</span>, <span class="hljs-string">"rgba(43, 41, 70, 0.5)"</span>, <span class="hljs-string">"#ff9800"</span>); <span class="hljs-comment">// Space cadet, Orange peel</span>
@@ -100,7 +100,7 @@
 </code></pre>
 <p class="has-line-data" data-line-start="118" data-line-end="119">Використовуючи інструкцію <code>setStepGrid(step)</code> перед малюванням сітки, можна окремо встановити крок сітки <code>step</code>, а за допомогою інструкції <code>getStepGrid()</code> можна отримати поточне значення кроку сітки.</p>
 <h3 class="code-line" data-line-start="120" data-line-end="121"><a id="______120"></a>Відображення Черепашки, інформаційна панель та компас</h3>
-<p class="has-line-data" data-line-start="122" data-line-end="123">За замовчуванням, на полотні відображається інформаційна панель з даними про:</p>
+<p class="has-line-data" data-line-start="122" data-line-end="123">За стандартним налаштуванням на полотні відображається інформаційна панель з даними про:</p>
 <ul>
 <li class="has-line-data" data-line-start="124" data-line-end="125">стан Черепашки (кутову орієнтацію, поточні координати),</li>
 <li class="has-line-data" data-line-start="125" data-line-end="126">стан олівця (на полотні чи піднятий),</li>
@@ -125,7 +125,7 @@
 </blockquote>
 <h3 class="code-line" data-line-start="148" data-line-end="149"><a id="__p5js_148"></a>Черепашка і <code>p5.js</code></h3>
 <p class="has-line-data" data-line-start="150" data-line-end="151">На полотні поруч з Черепашкою можна створювати зображення, використовуючи інструменти бібліотеки <a href="https://p5js.org/">p5.js</a>.</p>
-<p class="has-line-data" data-line-start="152" data-line-end="153">Виклики функцій <code>p5.js</code> для цих цілей записуються усередині функцій <code>draw()</code> і <code>setup()</code>. Зверніть увагу, що, за замовчуванням, початок координат <code>(0, 0)</code> у бібліотеці <code>p5.js</code> розташований у лівому верхньому куті полотна.</p>
+<p class="has-line-data" data-line-start="152" data-line-end="153">Виклики функцій <code>p5.js</code> для цих цілей записуються усередині функцій <code>draw()</code> і <code>setup()</code>. Зверніть увагу, що за стандартним налаштуванням, початок координат <code>(0, 0)</code> у бібліотеці <code>p5.js</code> розташований у лівому верхньому куті полотна.</p>
 <p class="has-line-data" data-line-start="154" data-line-end="155">Початок координат <code>(0, 0)</code> для Черепашки міститься в центрі полотна. За таких умов, одночасно відслідковувати координати для Черепашки і для побудови фігур складно.</p>
 <p class="has-line-data" data-line-start="156" data-line-end="157">У цьому разі інструкції для Черепашки і код для побудови фігур за допомогою інструментів бібліотеки <code>p5.js</code> можна записувати у блоці <code>myDraw()</code> (за потреби назву блоку можна змінити на іншу) між коментарями <code>// початок коду для фігур</code> і <code>// кінець коду для фігур</code>, а виклик <code>myDraw()</code> помістити у блоці <code>draw()</code>:</p>
 <pre><code class="has-line-data" data-line-start="159" data-line-end="181" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
@@ -269,11 +269,11 @@
 </tr>
 <tr>
 <td><code>setShape(shape)</code></td>
-<td>Встановити форму <code>shape</code> для Черепашки. <code>shape</code> може набувати значень: <code>&quot;blank&quot;</code> (невидимість), <code>&quot;circle&quot;</code>, <code>&quot;square&quot;</code>, <code>&quot;triangle&quot;</code>. За замовчуванням, форма Черепашки <code>&quot;triangle&quot;</code>.</td>
+<td>Встановити форму <code>shape</code> для Черепашки. <code>shape</code> може набувати значень: <code>&quot;blank&quot;</code> (невидимість), <code>&quot;circle&quot;</code>, <code>&quot;square&quot;</code>, <code>&quot;triangle&quot;</code>. За стандартним налаштуванням форма Черепашки <code>&quot;triangle&quot;</code>.</td>
 </tr>
 <tr>
 <td><code>setShapeSize(s)</code></td>
-<td>Встановити розмір <code>s</code> для форми Черепашки. За замовчуванням, мінімальний розмір - <code>1</code>, максимальне значення - <code>20</code>.</td>
+<td>Встановити розмір <code>s</code> для форми Черепашки. За стандартним налаштуванням мінімальний розмір - <code>1</code>, максимальне значення - <code>20</code>.</td>
 </tr>
 <tr>
 <td><code>showTurtle()</code></td>
@@ -307,11 +307,11 @@
 </tr>
 <tr>
 <td><code>penDown()</code></td>
-<td>Опустити олівець на полотно. За замовчуванням, олівець на полотні.</td>
+<td>Опустити олівець на полотно. За стандартним налаштуванням олівець на полотні.</td>
 </tr>
 <tr>
 <td><code>setPenSize(s)</code></td>
-<td>Встановити у пікселях товщину лінії олівця на <code>s</code>. За замовчуванням, товщина лінії олівця <code>1</code> піксель.</td>
+<td>Встановити у пікселях товщину лінії олівця на <code>s</code>. За стандартним налаштуванням товщина лінії олівця <code>1</code> піксель.</td>
 </tr>
 </tbody>
 </table>
@@ -327,15 +327,15 @@
 <tbody>
 <tr>
 <td><code>setColor(c, f)</code></td>
-<td>Встановити колір <code>c</code> для олівця та колір заливки <code>f</code> для зафарбовування фігур. За замовчуванням, колір олівця - чорний, колір заливки - прозорий. Для встановлення лише кольору олівця інструкція використовується з одним параметром: <code>setColor(c)</code> .</td>
+<td>Встановити колір <code>c</code> для олівця та колір заливки <code>f</code> для зафарбовування фігур. За стандартним налаштуванням колір олівця - чорний, колір заливки - прозорий. Для встановлення лише кольору олівця інструкція використовується з одним параметром: <code>setColor(c)</code> .</td>
 </tr>
 <tr>
 <td><code>setBgColor(c)</code></td>
-<td>Встановити колір <code>c</code> для тла полотна. За замовчуванням, білий.</td>
+<td>Встановити колір <code>c</code> для тла полотна. За стандартним налаштуванням - білий.</td>
 </tr>
 <tr>
 <td><code>setFillColor(f)</code></td>
-<td>Встановити колір заливки <code>f</code> для зафарбовування фігур. За замовчуванням, заливка прозора.</td>
+<td>Встановити колір заливки <code>f</code> для зафарбовування фігур. За стандартним налаштуванням заливка прозора.</td>
 </tr>
 <tr>
 <td><code>beginFill()</code></td>
@@ -382,17 +382,17 @@
 </tbody>
 </table>
 <blockquote>
-<p class="has-line-data" data-line-start="318" data-line-end="319">За замовчуванням, текст є порожнім рядком і має такі параметри: вирівнювання <code>{horizontal: CENTER, vertical: CENTER}</code> і шрифту <code>{font: &quot;sans-serif&quot;, size: 12, style: NORMAL}</code>.</p>
+<p class="has-line-data" data-line-start="318" data-line-end="319">За стандартним налаштуванням текст є порожнім рядком і має такі параметри: вирівнювання <code>{horizontal: CENTER, vertical: CENTER}</code> і шрифту <code>{font: &quot;sans-serif&quot;, size: 12, style: NORMAL}</code>.</p>
 </blockquote>
 <h2 class="code-line" data-line-start="320" data-line-end="321"><a id="_320"></a>Розробка</h2>
 <p class="has-line-data" data-line-start="322" data-line-end="323">Для розробки бібліотеки <code>TurtleGL.js</code> та застосунку <code>Інтерактивна мапа</code> використовувалась мова програмування <code>JavaScript</code> та застосовувались інструменти бібліотеки <a href="https://p5js.org/">p5.js</a>.</p>
 <h2 class="code-line" data-line-start="324" data-line-end="325"><a id="___TurtleGLjs_324"></a>Початковий код бібліотеки <code>TurtleGL.js</code></h2>
 <p class="has-line-data" data-line-start="326" data-line-end="327">Початковий код бібліотеки <code>TurtleGL.js</code> зберігається в єдиному файлі, який можна завантажити <a href="https://openprocessing-usercontent.s3.amazonaws.com/files/user269920/visual1921747/h293ff2e4f607b73125b776cfd2ce2070/TurtleGL.js">тут</a>.</p>
-<h2 class="code-line" data-line-start="329" data-line-end="330"><a id="_329"></a>Ліцензія</h2>
-<p class="has-line-data" data-line-start="331" data-line-end="332">Використання бібліотеки <code>TurtleGL.js</code> визначається умовами ліцензії <code>GNU General Public License (GPL) version 3</code>.</p>
+<h2 class="code-line" data-line-start="328" data-line-end="329"><a id="_328"></a>Ліцензія</h2>
+<p class="has-line-data" data-line-start="330" data-line-end="331">Використання бібліотеки <code>TurtleGL.js</code> визначається умовами ліцензії <code>GNU General Public License (GPL) version 3</code>.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="333" data-line-end="334">Код бібліотеки <code>TurtleGL.js</code> можна вільно і безкоштовно копіювати, розповсюджувати і змінювати на свій задум.</p>
+<p class="has-line-data" data-line-start="332" data-line-end="333">Код бібліотеки <code>TurtleGL.js</code> можна вільно і безкоштовно копіювати, розповсюджувати і змінювати на свій задум.</p>
 </blockquote>
 <hr>
-<p class="has-line-data" data-line-start="337" data-line-end="338">© 2024. <code>JavaScript Turtle Graphics Library</code>. Розроблено з ❤️ <strong>Олександр Мізюк</strong></p>
+<p class="has-line-data" data-line-start="336" data-line-end="337">© 2024. <code>JavaScript Turtle Graphics Library</code>. Розроблено з ❤️. Автор: <strong>Олександр Мізюк</strong>.</p>
 </body></html>
