@@ -4,26 +4,26 @@
 <h2 class="code-line" data-line-start="3" data-line-end="4"><a id="_3"></a>Передмова</h2>
 <p class="has-line-data" data-line-start="5" data-line-end="6"><code>JavaScript Turtle Graphics Library</code> - це середовище програмування, до складу якого входять:</p>
 <ul>
-<li class="has-line-data" data-line-start="7" data-line-end="8"><code>JavaScript</code>-бібліотека <code>TurtleGL.js</code>, яка містить базовий набір інструментів для програмування Черепашачої <code>2D</code>-графіки (<code>Turtle Graphics</code>) у вебпереглядачі, використовуючи об’єктно-орієнтований підхід;</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8"><code>JavaScript</code>-бібліотека <code>TurtleGL.js</code>, яка містить базовий набір інструментів для програмування Черепашачої <code>2D</code>-графіки (<code>Turtle Graphics</code>) у вебпереглядачі, використовуючи об’єктоорієнтований підхід;</li>
 <li class="has-line-data" data-line-start="8" data-line-end="10">застосунок <code>Інтерактивна мапа</code>, який є зручним інструментом для створення прототипів зображень.</li>
 </ul>
 <p class="has-line-data" data-line-start="10" data-line-end="11">Мета створення середовища <code>JavaScript Turtle Graphics Library</code> - навчання основам програмування на прикладі роботи з Черепашачою <code>2D</code>-графікою у вебпереглядачі, використовуючи мову програмування <code>JavaScript</code> і можливості бібліотеки <a href="https://p5js.org/">p5.js</a>.</p>
 <blockquote>
 <p class="has-line-data" data-line-start="12" data-line-end="13">Версія посібника у формі інтерактивного покрокового підручника опублікована <a href="https://openprocessing.org/sketch/2014874">тут</a>.</p>
 </blockquote>
-<h2 class="code-line" data-line-start="14" data-line-end="15"><a id="__TurtleGLjs_14"></a>Підключення бібліотеки <code>TurtleGL.js</code></h2>
-<p class="has-line-data" data-line-start="16" data-line-end="17">Бібліотека <code>TurtleGL.js</code> використовує засоби бібліотеки <code>p5.js</code>. Щоб підключити бібліотеку <code>TurtleGL.js</code> у свій проєкт, оберіть один із запропонованих способів:</p>
+<h2 class="code-line" data-line-start="14" data-line-end="15"><a id="__TurtleGLjs_14"></a>Приєднання бібліотеки <code>TurtleGL.js</code></h2>
+<p class="has-line-data" data-line-start="16" data-line-end="17">Бібліотека <code>TurtleGL.js</code> використовує засоби бібліотеки <code>p5.js</code>. Для приєдннаня бібліотеки <code>TurtleGL.js</code> до проєкту, оберіть один із запропонованих способів:</p>
 <ol>
-<li class="has-line-data" data-line-start="18" data-line-end="19">В онлайн-редакторі <a href="https://editor.p5js.org/">editor.p5js.org</a> файл бібліотеки <code>TurtleGL.js</code> необхідно підключити у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
-<li class="has-line-data" data-line-start="19" data-line-end="20">У разі локальної розробки <a href="https://p5js.org/download/">завантажити</a> зразок проєкту <code>p5.js</code>, у який підключити файл бібліотеки <code>TurtleGL.js</code> у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
-<li class="has-line-data" data-line-start="20" data-line-end="26">У онлайн-редакторі <a href="https://codepen.io/pen/">CodePen</a>:<br>
+<li class="has-line-data" data-line-start="18" data-line-end="19">В онлайн-редакторі <a href="https://editor.p5js.org/">editor.p5js.org</a> файл бібліотеки <code>TurtleGL.js</code> необхідно приєднати у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
+<li class="has-line-data" data-line-start="19" data-line-end="20">У разі локальної розробки <a href="https://p5js.org/download/">завантажити</a> зразок проєкту <code>p5.js</code>, у який приєднати файл бібліотеки <code>TurtleGL.js</code> у файлі <code>index.html</code> перед файлом ескізу <code>sketch.js</code>.</li>
+<li class="has-line-data" data-line-start="20" data-line-end="26">В онлайн-редакторі <a href="https://codepen.io/pen/">CodePen</a>:<br>
 – перейти у вкладку <code>JS</code>;<br>
 – натиснути на зображення шестерні;<br>
-– у розділі <code>Add External Scripts/Pens</code> у рядку пошуку знайти і обрати <code>p5.js</code>;<br>
+– у розділі <code>Add External Scripts/Pens</code> у рядку пошуку знайти й обрати <code>p5.js</code>;<br>
 – у розділі <code>Add External Scripts/Pens</code> натиснути на кнопку <code>+add another resource</code> і у рядку, що з’явився, додати посилання на файл бібліотеки <code>TurtleGL.js</code>;<br>
 – зберегти зміни, натиснувши кнопку <code>Save &amp; Close</code> (для зареєстрованих користувачів), інакше - кнопку <code>Close</code>.</li>
-<li class="has-line-data" data-line-start="26" data-line-end="27">В онлайн-середовищі <a href="https://replit.com/">Replit</a> при створенні нового <code>Repl</code> необхідно обрати шаблон <code>p5.js</code>, відвантажити файл бібліотеки <code>TurtleGL.js</code> у створений <code>Repl</code> і підключити файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>script.js</code>.</li>
-<li class="has-line-data" data-line-start="27" data-line-end="28">В онлайн-середовищі <a href="https://openprocessing.org/">OpenProcessing</a> у створений ескіз за допомогою розділу <code>FILES</code> відвантажити файл бібліотеки <code>TurtleGL.js</code>. Перейшовши у розділ <code>SKETCH</code> і обравши режим (<code>MODE</code>) <code>HTML/CSS/JS</code>, підключити відвантажений файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>mySketch.js</code>.</li>
+<li class="has-line-data" data-line-start="26" data-line-end="27">В онлайн-середовищі <a href="https://replit.com/">Replit</a> при створенні нового <code>Repl</code> необхідно обрати шаблон <code>p5.js</code>, відвантажити файл бібліотеки <code>TurtleGL.js</code> у створений <code>Repl</code> і приєднати файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>script.js</code>.</li>
+<li class="has-line-data" data-line-start="27" data-line-end="28">В онлайн-середовищі <a href="https://openprocessing.org/">OpenProcessing</a> у створений ескіз за допомогою розділу <code>FILES</code> відвантажити файл бібліотеки <code>TurtleGL.js</code>. Перейшовши у розділ <code>SKETCH</code> і обравши режим (<code>MODE</code>) <code>HTML/CSS/JS</code>, приєднати відвантажений файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>mySketch.js</code>.</li>
 <li class="has-line-data" data-line-start="28" data-line-end="30">Використати <a href="https://p5js-widget.pp.ua/">p5js-widget.pp.ua</a> - простий онлайн-редактор, створений на основі <a href="https://toolness.github.io/p5.js-widget/">p5.js-widget</a> - інструменту для вбудовування на сторінки сайтів редактора для запуску і редагування ескізів <code>p5.js</code>. У цей редактор бібліотека <code>TurtleGL.js</code> вже інтегрована і готова до використання.</li>
 </ol>
 <blockquote>
@@ -38,7 +38,7 @@
 <h2 class="code-line" data-line-start="36" data-line-end="37"><a id="___36"></a>Застосунок <code>Інтерактивна мапа</code></h2>
 <p class="has-line-data" data-line-start="38" data-line-end="39">Для зручності роботи з бібліотекою <code>TurtleGL.js</code> створений застосунок <code>Інтерактивна мапа</code>, за допомогою якого можна:</p>
 <ul>
-<li class="has-line-data" data-line-start="40" data-line-end="41">відслідковувати, фіксувати на полотні і, за потреби, зберігати координати Черепашки у текстовий файл;</li>
+<li class="has-line-data" data-line-start="40" data-line-end="41">відстежувати, фіксувати на полотні та, за потреби, зберігати координати Черепашки у текстовий файл;</li>
 <li class="has-line-data" data-line-start="41" data-line-end="42">зберігати у файл полотно з малюнком;</li>
 <li class="has-line-data" data-line-start="42" data-line-end="44">змінювати властивості Черепашки/олівця (колір, форму, розмір, кутову орієнтацію Черепашки, товщину і колір олівця).</li>
 </ul>
@@ -126,8 +126,8 @@
 <h3 class="code-line" data-line-start="148" data-line-end="149"><a id="__p5js_148"></a>Черепашка і <code>p5.js</code></h3>
 <p class="has-line-data" data-line-start="150" data-line-end="151">На полотні поруч з Черепашкою можна створювати зображення, використовуючи інструменти бібліотеки <a href="https://p5js.org/">p5.js</a>.</p>
 <p class="has-line-data" data-line-start="152" data-line-end="153">Виклики функцій <code>p5.js</code> для цих цілей записуються усередині функцій <code>draw()</code> і <code>setup()</code>. Зверніть увагу, що за стандартним налаштуванням, початок координат <code>(0, 0)</code> у бібліотеці <code>p5.js</code> розташований у лівому верхньому куті полотна.</p>
-<p class="has-line-data" data-line-start="154" data-line-end="155">Початок координат <code>(0, 0)</code> для Черепашки міститься в центрі полотна. За таких умов, одночасно відслідковувати координати для Черепашки і для побудови фігур складно.</p>
-<p class="has-line-data" data-line-start="156" data-line-end="157">У цьому разі інструкції для Черепашки і код для побудови фігур за допомогою інструментів бібліотеки <code>p5.js</code> можна записувати у блоці <code>myDraw()</code> (за потреби назву блоку можна змінити на іншу) між коментарями <code>// початок коду для фігур</code> і <code>// кінець коду для фігур</code>, а виклик <code>myDraw()</code> помістити у блоці <code>draw()</code>:</p>
+<p class="has-line-data" data-line-start="154" data-line-end="155">Початок координат <code>(0, 0)</code> для Черепашки міститься в центрі полотна. За таких умов, одночасно відстежувати координати Черепашки та координати для побудови фігур складно.</p>
+<p class="has-line-data" data-line-start="156" data-line-end="157">У цьому разі інструкції для Черепашки та код для побудови фігур за допомогою інструментів бібліотеки <code>p5.js</code> можна записувати у блоці <code>myDraw()</code> (за потреби назву блоку можна змінити на іншу) між коментарями <code>// початок коду для фігур</code> і <code>// кінець коду для фігур</code>, а виклик <code>myDraw()</code> помістити у блоці <code>draw()</code>:</p>
 <pre><code class="has-line-data" data-line-start="159" data-line-end="181" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
   myDraw();
   t.place();
@@ -152,7 +152,7 @@
 </code></pre>
 <p class="has-line-data" data-line-start="182" data-line-end="183">За допомогою виразу <code>let [x, y] = t.getPosition();</code> можна отримати поточні координати Черепашки з ім’ям <code>t</code> в координатній сітці, початок координат якої міститься в центрі полотна, і, за потреби, використати для побудови зображень фігур та створення анімаційних ефектів за допомогою інструментів бібліотеки <code>p5.js</code>.</p>
 <p class="has-line-data" data-line-start="184" data-line-end="185">У разі використання функції <code>background()</code> із бібліотеки <code>p5.js</code>, варто правильно зазначити місце її виклику у коді, щоб уникнути небажаного зафарбовування всього полотна. Таким місцем розташування виклику функції <code>background()</code> може бути тіло функції <code>myDraw()</code>.</p>
-<p class="has-line-data" data-line-start="186" data-line-end="187">Між коментарями <code>// початок коду для сітки і тла полотна</code> і <code>// кінець коду для сітки і тла полотна</code> також можна розмістити виклик інструкції для малювання сітки на полотні, коли необхідно одночасно використовувати і кольорове полотно, і координатну сітку.</p>
+<p class="has-line-data" data-line-start="186" data-line-end="187">Між коментарями <code>// початок коду для сітки і тла полотна</code> і <code>// кінець коду для сітки і тла полотна</code> також можна розмістити виклик інструкції для малювання сітки на полотні, коли необхідно одночасно використовувати й кольорове полотно, і координатну сітку.</p>
 <pre><code class="has-line-data" data-line-start="189" data-line-end="209" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myDraw</span>(<span class="hljs-params"></span>)</span>{
   <span class="hljs-comment">// початок коду для сітки і тла полотна</span>
   background(<span class="hljs-number">70</span>, <span class="hljs-number">77</span>, <span class="hljs-number">119</span>); <span class="hljs-comment">// YInMn Blue</span>
@@ -238,15 +238,15 @@
 </tr>
 <tr>
 <td><code>left(angle)</code></td>
-<td>Повернути Черепашку ліворуч на кут <code>angle</code>, де <code>angle</code> - число (ціле чи з плаваючою крапкою). Якщо значення кута <code>angle</code> додатне, то Черепашка повертається на це значення кута проти годинникової стрілки (кутова орієнтація стає <code>angle</code>), якщо від’ємне - Черепашка повертається за годинниковою стрілкою на це значення кута (кутова орієнтація стає <code>360 - abs(angle)</code>, де <code>abs(angle)</code> - значення <code>angle</code> по модулю).</td>
+<td>Повернути Черепашку ліворуч на кут <code>angle</code>, де <code>angle</code> - число (ціле чи з рухомою крапкою). Якщо значення кута <code>angle</code> додатне, то Черепашка повертається на це значення кута проти годинникової стрілки (кутова орієнтація стає <code>angle</code>), якщо від’ємне - Черепашка повертається за годинниковою стрілкою на це значення кута (кутова орієнтація стає <code>360 - abs(angle)</code>, де <code>abs(angle)</code> - значення <code>angle</code> по модулю).</td>
 </tr>
 <tr>
 <td><code>right(angle)</code></td>
-<td>Повернути Черепашку праворуч на кут <code>angle</code>, де <code>angle</code> - число (ціле чи з плаваючою крапкою). Якщо значення кута <code>angle</code> від’ємне, то Черепашка повертається на це значення кута проти годинникової стрілки (кутова орієнтація стає <code>angle</code>), якщо додатне - Черепашка повертається за годинниковою стрілкою на це значення кута (кутова орієнтація стає <code>360 - abs(angle)</code>, де <code>abs(angle)</code> - значення <code>angle</code> по модулю).</td>
+<td>Повернути Черепашку праворуч на кут <code>angle</code>, де <code>angle</code> - число (ціле чи з рухомою крапкою). Якщо значення кута <code>angle</code> від’ємне, то Черепашка повертається на це значення кута проти годинникової стрілки (кутова орієнтація стає <code>angle</code>), якщо додатне - Черепашка повертається за годинниковою стрілкою на це значення кута (кутова орієнтація стає <code>360 - abs(angle)</code>, де <code>abs(angle)</code> - значення <code>angle</code> по модулю).</td>
 </tr>
 <tr>
 <td><code>setHeading(angle)</code></td>
-<td>Встановити кутову орієнтацію Черепашки на кут <code>angle</code>, де <code>angle</code> - число (ціле чи з плаваючою крапкою). Якщо значення кута <code>angle</code> додатне, то Черепашка повертається на це значення кута проти годинникової стрілки (кутова орієнтація стає <code>angle</code>), якщо від’ємне - Черепашка повертається за годинниковою стрілкою на це значення кута (кутова орієнтація стає <code>360 - abs(angle)</code>, де <code>abs(angle)</code> - значення <code>angle</code> по модулю).</td>
+<td>Встановити кутову орієнтацію Черепашки на кут <code>angle</code>, де <code>angle</code> - число (ціле чи з рухомою крапкою). Якщо значення кута <code>angle</code> додатне, то Черепашка повертається на це значення кута проти годинникової стрілки (кутова орієнтація стає <code>angle</code>), якщо від’ємне - Черепашка повертається за годинниковою стрілкою на це значення кута (кутова орієнтація стає <code>360 - abs(angle)</code>, де <code>abs(angle)</code> - значення <code>angle</code> по модулю).</td>
 </tr>
 </tbody>
 </table>
@@ -358,7 +358,7 @@
 <tbody>
 <tr>
 <td><code>oval(r, e)</code></td>
-<td>Намалювати коло чи еліпс. Якщо параметри <code>r</code> і <code>e</code> набувать однакових значень, то Черепашка малює коло зі значенням радіуса, що дорівнює <code>r</code>. У разі різних значень <code>r</code> і <code>e</code> - отримуємо еліпс.</td>
+<td>Намалювати коло чи еліпс. Якщо параметри <code>r</code> і <code>e</code> набувають однакових значень, то Черепашка малює коло зі значенням радіуса, що дорівнює <code>r</code>. У разі різних значень <code>r</code> і <code>e</code> - отримуємо еліпс.</td>
 </tr>
 <tr>
 <td><code>polygon([[x1, y1], [x2, y2], [x3, y3], ...])</code></td>
@@ -377,7 +377,7 @@
 <tbody>
 <tr>
 <td><code>write(&quot;txt&quot;, {horizontal: A, vertical: B}, {font: C, size: D, style: E})</code></td>
-<td>Напиcати текст <code>&quot;txt&quot;</code> у поточній позиції Черепашки. Об’єкт <code>{horizontal: A, vertical: B}</code> використовується для вирівнювання тексту, де <code>A</code> може набувати значень <code>LEFT</code>, <code>CENTER</code> або <code>RIGHT</code>, а <code>B</code> - <code>TOP</code>, <code>BOTTOM</code>, <code>CENTER</code> або <code>BASELINE</code>. Об’єкт <code>{font: C, size: D, style: E}</code> визначає шрифт, розмір тексту і стиль відповідно, а саме: <code>C</code> може набувати значень <code>Arial</code>, <code>Times</code>, <code>Verdana</code> тощо, <code>D</code> - ціле число, <code>E</code> може набувати значень <code>NORMAL</code>, <code>ITALIC</code>, <code>BOLD</code>, <code>BOLDITALIC</code>.</td>
+<td>Написати текст <code>&quot;txt&quot;</code> у поточній позиції Черепашки. Об’єкт <code>{horizontal: A, vertical: B}</code> використовується для вирівнювання тексту, де <code>A</code> може набувати значень <code>LEFT</code>, <code>CENTER</code> або <code>RIGHT</code>, а <code>B</code> - <code>TOP</code>, <code>BOTTOM</code>, <code>CENTER</code> або <code>BASELINE</code>. Об’єкт <code>{font: C, size: D, style: E}</code> визначає шрифт, розмір тексту і стиль відповідно, а саме: <code>C</code> може набувати значень <code>Arial</code>, <code>Times</code>, <code>Verdana</code> тощо, <code>D</code> - ціле число, <code>E</code> може набувати значень <code>NORMAL</code>, <code>ITALIC</code>, <code>BOLD</code>, <code>BOLDITALIC</code>.</td>
 </tr>
 </tbody>
 </table>
