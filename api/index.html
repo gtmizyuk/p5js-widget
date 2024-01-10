@@ -20,7 +20,7 @@
 – перейти у вкладку <code>JS</code>;<br>
 – натиснути на зображення шестерні;<br>
 – у розділі <code>Add External Scripts/Pens</code> у рядку пошуку знайти й обрати <code>p5.js</code>;<br>
-– у розділі <code>Add External Scripts/Pens</code> натиснути на кнопку <code>+add another resource</code> і у рядку, що з’явився, додати посилання на файл бібліотеки <code>TurtleGL.js</code>;<br>
+– у розділі <code>Add External Scripts/Pens</code> натиснути на кнопку <code>+add another resource</code> та у рядку, що з’явився, додати посилання на файл бібліотеки <code>TurtleGL.js</code>;<br>
 – зберегти зміни, натиснувши кнопку <code>Save &amp; Close</code> (для зареєстрованих користувачів), інакше - кнопку <code>Close</code>.</li>
 <li class="has-line-data" data-line-start="26" data-line-end="27">В онлайн-середовищі <a href="https://replit.com/">Replit</a> при створенні нового <code>Repl</code> необхідно обрати шаблон <code>p5.js</code>, відвантажити файл бібліотеки <code>TurtleGL.js</code> у створений <code>Repl</code> і приєднати файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>script.js</code>.</li>
 <li class="has-line-data" data-line-start="27" data-line-end="28">В онлайн-середовищі <a href="https://openprocessing.org/">OpenProcessing</a> у створений ескіз за допомогою розділу <code>FILES</code> відвантажити файл бібліотеки <code>TurtleGL.js</code>. Перейшовши у розділ <code>SKETCH</code> і обравши режим (<code>MODE</code>) <code>HTML/CSS/JS</code>, приєднати відвантажений файл бібліотеки у файлі <code>index.html</code> перед файлом ескізу <code>mySketch.js</code>.</li>
@@ -49,7 +49,7 @@
 </ul>
 <h2 class="code-line" data-line-start="49" data-line-end="50"><a id="__TurtleGLjs_49"></a>Використання бібліотеки <code>TurtleGL.js</code></h2>
 <h3 class="code-line" data-line-start="51" data-line-end="52"><a id="__51"></a>Початкові налаштування</h3>
-<p class="has-line-data" data-line-start="53" data-line-end="54">У блоці <code>setup()</code> записуємо функцію <code>createCanvas(windowWidth, windowHeight)</code> для створення полотна, де <code>windowWidth</code> і <code>windowHeight</code> - це системні змінні, що містять значення ширина і висоти внутрішнього вікна (тобто вікна перегляду, у якому вебпереглядач «малює» вебсторінку) відповідно, і викликаємо <code>myCode()</code> - це назва блоку, в якому записані інструкції для Черепашки.</p>
+<p class="has-line-data" data-line-start="53" data-line-end="54">У блоці <code>setup()</code> записуємо функцію <code>createCanvas(windowWidth, windowHeight)</code> для створення полотна, де <code>windowWidth</code> і <code>windowHeight</code> - це системні змінні, що містять значення ширини і висоти внутрішнього вікна (тобто вікна перегляду, у якому вебпереглядач «малює» вебсторінку) відповідно, і викликаємо <code>myCode()</code> - це назва блоку, в якому записані інструкції для Черепашки.</p>
 <pre><code class="has-line-data" data-line-start="56" data-line-end="63" class="language-javascript"><span class="hljs-keyword">let</span> t;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
@@ -58,7 +58,7 @@
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="64" data-line-end="65">Значення розмірів полотна, які за стандартним налаштуванням використовує функція <code>createCanvas()</code> (коли викликається без аргументів) - <code>200x200</code> пікселів. За потреби можна створити полотно будь-якого розміру, зазначивши у <code>createCanvas()</code> відповідні значення розмірів ширини і висоти.</p>
+<p class="has-line-data" data-line-start="64" data-line-end="65">Значення розмірів полотна, які за стандартним налаштуванням використовує функція <code>createCanvas()</code> (коли викликається без аргументів) - <code>200x200</code> пікселів. За потреби можна створити полотно будь-якого розміру, зазначивши у <code>createCanvas()</code> відповідні значення розмірів ширини й висоти.</p>
 </blockquote>
 <p class="has-line-data" data-line-start="66" data-line-end="67">Також на початку у коді оголошуємо ім’я для майбутньої Черепашки - <code>t</code>.</p>
 <blockquote>
