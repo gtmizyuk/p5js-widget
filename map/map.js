@@ -88,7 +88,7 @@ function createGrid(
     gridPrivate.line(0, j * step, gridPrivate.width, j * step);
   }
   // центральні лінії
-  gridPrivate.stroke(colorAxis); // за замовчуванням Cerulean
+  gridPrivate.stroke(colorAxis); // стандартно Cerulean
   gridPrivate.strokeWeight(axisThickness);
   gridPrivate.line(
     gridPrivate.width / 2,
@@ -210,13 +210,13 @@ function createCheckBoxes() {
   checkItems.pen.position(10, 250);
   checkItems.pen.addClass("chk");
 
-  // написи для координат
+  // написів для координат
   checkItems.coords = createCheckbox("написи", false);
   checkItems.coords.changed(checkedVisibleCoords);
   checkItems.coords.position(75, 250);
   checkItems.coords.addClass("chk");
 
-  // сітки, за замовчуванням вимкнена
+  // сітки, стандартно вимкнена
   checkItems.gridPrivate = createCheckbox("сітка", false);
   checkItems.gridPrivate.changed(checkedVisibleGrid);
   checkItems.gridPrivate.position(75, 225);
