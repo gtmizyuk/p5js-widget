@@ -21258,7 +21258,7 @@
 /***/ (function(module, exports) {
 
 	"use strict";
-	exports.P5_VERSION = '1.6.0';
+	exports.P5_VERSION = '1.9.0';
 	exports.PREVIEW_WIDTH = document.documentElement.clientWidth / 2;
 	exports.HEIGHT = document.documentElement.clientHeight;
 	exports.MAX_RUN_TIME = 1000;
