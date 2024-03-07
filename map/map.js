@@ -52,7 +52,7 @@ function setup() {
   // створити чекбокси
   createCheckBoxes();
 
-  // ствторити кнопки:
+  // створити кнопки:
   // зберегти зображeння у форматі PNG
   btnSaveCanvasTurtle = createButton("зберегти полотно png");
   btnSaveCanvasTurtle.mousePressed(saveCanvasTurtle);
