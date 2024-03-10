@@ -1,11 +1,15 @@
-let t, tMirror, cnv, theta, controlBoard, gridPrivate;
+let t, tMirror, cnv, theta, controlBoard, gridPrivate, uploadBoard, fileData;
 let sliderShapeTurtle,
   sliderSizeTurtle,
   sliderHeadingTurtle,
   sliderPenSize,
+  sliderTransparencyUploadImage,
   colorPicker,
   btnSaveCanvasTurtle,
-  btnSaveCoordsTurtle;
+  btnSaveCoordsTurtle,
+  btnUploadImg,
+  uploadImg = null;
+
 let checkItems = {};
 let coords = []; // координати для текстового файлу
 let coordsTitle = false;
@@ -13,14 +17,18 @@ let startTurtleX, startTurtleY;
 let progress = []; // стани Черепашки
 
 function setup() {
+  // основне полотно
   cnv = createCanvas(windowWidth, windowHeight);
   cnv.mousePressed(mClick);
 
-  colorPicker = createColorPicker("#ed225d"); // Cerise
+  // вибір кольору
+  colorPicker = createColorPicker("#ed225d"); // стандартно Cerise
   colorPicker.position(10, 220);
 
+  // полотно для меню інструментів
   controlBoard = createGraphics(windowWidth, windowHeight);
 
+  // полотно для сітки
   gridPrivate = createGraphics(width, height);
 
   // основний примірник Черепашки
@@ -46,6 +54,9 @@ function setup() {
     (axisThickness = 2)
   );
 
+  // полотно для відвантажених зображень
+  uploadBoard = createGraphics(width, height);
+
   // створити слайдери
   createSliders();
 
@@ -58,21 +69,77 @@ function setup() {
   btnSaveCanvasTurtle.mousePressed(saveCanvasTurtle);
   btnSaveCanvasTurtle.position(10, 275);
   btnSaveCanvasTurtle.addClass("btn");
+
   // зберегти координати
   btnSaveCoordsTurtle = createButton("отримати координати");
   btnSaveCoordsTurtle.mousePressed(saveCoordsTurtle);
   btnSaveCoordsTurtle.position(10, 300);
   btnSaveCoordsTurtle.addClass("btn");
+
+  // відвантажити зображення PNG, JPG
+  btnUploadImg = createFileInput(uploadImage, false);
+  btnUploadImg.style("width", "95px");
+  btnUploadImg.position(10, 325);
+  btnUploadImg.addClass("btn");
+  btnUploadImg.addClass("upload");
+
+  // видалити відвантажене зображення
+  btnRemoveLoadImg = createButton("✘");
+  btnRemoveLoadImg.mousePressed(removeUploadImage);
+  btnRemoveLoadImg.style("color", "#ed225D"); // Cerise
+  btnRemoveLoadImg.position(120, 325);
+  btnRemoveLoadImg.attribute("title", "Видалити зображення");
+  btnRemoveLoadImg.addClass("btn");
 }
 
 function draw() {
+  setUploadBoard();
   t.place();
   interfaceItems();
   image(controlBoard, 0, 0, controlBoard.width, controlBoard.height);
 }
 
+function setUploadBoard() {
+  let transparency = sliderTransparencyUploadImage.value() * 2.55;
+  uploadBoard.clear();
+  if (uploadImg) {
+    clear();
+    if (uploadImg.width >= uploadBoard.width) {
+      let imgRatio = uploadImg.height / uploadImg.width;
+      uploadImg.width = uploadBoard.width;
+      uploadImg.height = uploadImg.width * imgRatio;
+    }
+    if (uploadImg.height >= uploadBoard.height) {
+      let imgRatio = uploadImg.width / uploadImg.height;
+      uploadImg.height = uploadBoard.height;
+      uploadImg.width = uploadImg.height * imgRatio;
+    }
+    uploadBoard.image(
+      uploadImg,
+      uploadBoard.width / 2 - uploadImg.width / 2,
+      uploadBoard.height / 2 - uploadImg.height / 2,
+      uploadImg.width,
+      uploadImg.height
+    );
+    uploadBoard.background(255, transparency);
+  } else {
+    uploadBoard.background(255, 255);
+  }
+  image(
+    uploadBoard,
+    width / 2 - uploadBoard.width / 2,
+    height / 2 - uploadBoard.height / 2,
+    uploadBoard.width,
+    uploadBoard.height
+  );
+  if (checkItems.gridPrivate.checked()) {
+    image(gridPrivate, 0, 0, gridPrivate.width, gridPrivate.height);
+  }
+  memoryProgress();
+}
+
 function createGrid(
-  step = 50,
+  step = 150,
   colorLines = color(0, 50),
   colorAxis = color(11, 114, 159),
   linesThickness = 1,
@@ -119,7 +186,10 @@ function mClick() {
   tMirror.setPosition(turtleX, turtleY);
 
   if (coordsTitle) {
-    t.write(`  (${turtleX}, ${turtleY})`, { horizontal: LEFT, vertical: BOTTOM });
+    t.write(`  (${turtleX}, ${turtleY})`, {
+      horizontal: LEFT,
+      vertical: BOTTOM,
+    });
   }
   coords.push([turtleX, turtleY]);
 
@@ -171,6 +241,13 @@ function createSliders() {
   sliderPenSize = createSlider(1, 20, t.penSize, 1);
   sliderPenSize.position(10, 175);
   sliderPenSize.style("width", "130px");
+
+  // для зміни прозорості відвантаженого зображення PNG, JPG
+  let maxTransparency = 255;
+  let mappedMaxTransparency = map(maxTransparency, 0, 255, 0, 100);
+  sliderTransparencyUploadImage = createSlider(0, mappedMaxTransparency, 75, 1);
+  sliderTransparencyUploadImage.position(10, 370);
+  sliderTransparencyUploadImage.style("width", "130px");
 }
 
 function slidersHeadlines() {
@@ -179,7 +256,7 @@ function slidersHeadlines() {
   controlBoard.noStroke();
   controlBoard.fill(254, 185, 95); // Hunyadi yellow
   controlBoard.stroke(235, 235, 235); // Anti-flash white
-  controlBoard.rect(-1, t.heightDashboard + 10, 155, 295, 0, 4, 4, 0);
+  controlBoard.rect(-1, t.heightDashboard + 10, 155, 360, 0, 4, 4, 0);
   controlBoard.noStroke();
   controlBoard.fill(97, 112, 125, 255); // Payne's gray
 
@@ -199,7 +276,12 @@ function slidersHeadlines() {
   controlBoard.text(`колір: ${colorPicker.color()}`, 10, 210);
   //t.setColor(colorPicker.color());
   //t.setFillColor(colorPicker.color());
-  controlBoard.fill(255, 255);
+
+  controlBoard.text(
+    `прозорість: ${sliderTransparencyUploadImage.value()}%`,
+    10,
+    365
+  );
 }
 
 function createCheckBoxes() {
@@ -331,7 +413,10 @@ function stateMemory(
   pop();
   t.place();
   if (coordsTitle) {
-    t.write(`  (${turtleX}, ${turtleY})`, { horizontal: LEFT, vertical: BOTTOM });
+    t.write(`  (${turtleX}, ${turtleY})`, {
+      horizontal: LEFT,
+      vertical: BOTTOM,
+    });
   }
 }
 
@@ -365,4 +450,39 @@ function saveCoordsTurtle() {
   link.download = "coords.txt";
   link.click();
   URL.revokeObjectURL(link.href);
+}
+
+function uploadImage(file) {
+  // відвантаження зображення
+  const message = "Підтрима лише файлів PNG та JPG, обсягом меншим 1 МіБ";
+  if (file.type === "image" && file.size < 1048576) {
+    if (file.subtype === "png" || file.subtype === "jpeg") {
+      fileData = loadImage(file.data, () => {
+        uploadImg = createImg(file.data, "");
+        uploadImg.hide();
+        print("Зображення відвантажено успішно");
+      });
+    } else {
+      wrongUploadImage(message);
+    }
+  } else {
+    wrongUploadImage(message);
+  }
+}
+
+function wrongUploadImage(message) {
+  uploadImg = null;
+  document.querySelector(".upload").value = null;
+  print(message);
+}
+
+function removeUploadImage() {
+  uploadImg = null;
+  const fileInput = document.querySelector(".upload").value;
+  if (fileInput) {
+    document.querySelector(".upload").value = null;
+    print("Зображення видалено успішно");
+  } else {
+    print("Зображення не відвантажено або вже було видалено");
+  }
 }
